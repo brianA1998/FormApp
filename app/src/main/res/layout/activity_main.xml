@@ -15,29 +15,45 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
             android:hint="Nombre"
             app:helperText="Obligatorio"
-            app:startIconDrawable="@drawable/ic_person"
-            >
+            app:startIconDrawable="@drawable/ic_person">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords"
+                />
 
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <EditText
-            android:id="@+id/editTextLastName"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLastName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
-            android:hint="Apellido" />
+            android:hint="Apellido"
+            app:helperText="Obligatorio"
+            app:startIconDrawable="@drawable/ic_person"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords"
+                 />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
     </LinearLayout>
