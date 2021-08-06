@@ -27,7 +27,12 @@
                 android:id="@+id/editTextName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:inputType="textPersonName|textCapWords"
+                android:maxLength="@integer/name_max_length"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@id/editTextHeight"
+
                 />
 
 
@@ -41,17 +46,34 @@
             android:layout_marginTop="@dimen/common_padding_default"
             android:hint="Apellido"
             app:helperText="Obligatorio"
-            app:startIconDrawable="@drawable/ic_person"
-
-
-            >
+            app:startIconDrawable="@drawable/ic_person">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName|textCapWords"
-                 />
+                android:maxLength="@integer/name_max_length" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etHeight"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:hint="Altura"
+            app:helperText="Obligatorio"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords"
+                android:maxLength="@integer/name_max_length" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
