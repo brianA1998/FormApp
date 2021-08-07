@@ -106,6 +106,24 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pais"
+            android:layout_marginTop="@dimen/common_padding_default"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            >
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/actvCountries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+            </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
