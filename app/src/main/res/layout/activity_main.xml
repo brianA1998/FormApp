@@ -27,10 +27,9 @@
                 android:id="@+id/editTextName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:imeOptions="actionNext"
                 android:inputType="textPersonName|textCapWords"
                 android:maxLength="@integer/name_max_length"
-                android:imeOptions="actionNext"
                 android:nextFocusForward="@id/editTextHeight"
 
                 />
@@ -61,28 +60,48 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="@dimen/common_padding_default"
-            >
+            android:orientation="horizontal">
+
             <com.google.android.material.textfield.TextInputLayout
 
                 android:id="@+id/tilHeight"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                app:helperText="Minimo 50cm"
                 android:layout_height="wrap_content"
-                android:layout_weight="50"
-                android:layout_marginTop="@dimen/common_padding_default"
-                android:hint="Estatura"
 
+                android:layout_marginEnd="@dimen/common_padding_min"
+                android:layout_weight="40"
+                android:hint="Estatura"
+                app:helperText="Minimo 50cm"
                 app:startIconDrawable="@drawable/ic__height">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextHeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName|textCapWords"
-                    android:maxLength="@integer/name_max_length" />
+                    android:inputType="number"
+                    android:maxLength="@integer/height_max_length" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_min"
+
+                android:layout_weight="60"
+                android:hint="Fecha Nacimiento"
+                app:startIconDrawable="@drawable/ic_calendar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDateBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false" />
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
