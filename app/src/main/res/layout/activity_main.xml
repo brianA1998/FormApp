@@ -19,8 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
-            android:hint="Nombre"
-            app:helperText="Obligatorio"
+            android:hint="@string/hint_name"
+            app:helperText="@string/help_require"
             app:startIconDrawable="@drawable/ic_person">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -43,8 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
-            android:hint="Apellido"
-            app:helperText="Obligatorio"
+            android:hint="@string/hint_surname"
+            app:helperText="@string/help_require"
             app:startIconDrawable="@drawable/ic_person">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -61,7 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <com.google.android.material.textfield.TextInputLayout
 
@@ -72,8 +73,8 @@
 
                 android:layout_marginEnd="@dimen/common_padding_min"
                 android:layout_weight="40"
-                android:hint="Estatura"
-                app:helperText="Minimo 50cm"
+                android:hint="@string/hint_heigth"
+                app:helperText="@string/help_min_height"
                 app:startIconDrawable="@drawable/ic__height">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -91,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/common_padding_min"
                 android:layout_weight="60"
-                android:hint="Fecha Nacimiento"
+                android:hint="@string/hint_date_birth"
                 app:startIconDrawable="@drawable/ic_calendar">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -109,7 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
-            android:hint="Pais">
+            android:hint="@string/hint_country">
 
             <androidx.appcompat.widget.AppCompatAutoCompleteTextView
                 android:id="@+id/actvCountries"
@@ -123,7 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
-            android:hint="Lugar de nacimiento"
+            android:hint="@string/hint_place_birth"
             app:startIconDrawable="@drawable/ic_place">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -141,7 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
-            android:hint="Notas"
+            android:hint="@string/hint_notes"
             app:startIconDrawable="@drawable/ic_notes">
 
             <com.google.android.material.textfield.TextInputEditText

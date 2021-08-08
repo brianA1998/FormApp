@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FormApp</string>
+    <string name="hint_name">Nombre</string>
+    <string name="help_require">Obligatorio</string>
+    <string name="hint_surname">Apellido</string>
+    <string name="hint_heigth">Estatura</string>
+    <string name="help_min_height">Minimo 50cm</string>
+    <string name="hint_date_birth">Fecha Nacimiento</string>
+    <string name="hint_country">Pais</string>
+    <string name="hint_place_birth">Lugar de nacimiento</string>
+    <string name="hint_notes">Notas</string>
 </resources>
