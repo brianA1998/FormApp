@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputEditText
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,15 +23,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        /**
-         * Controlamos que elemento del menu se selecciona
-         */
+
+        //Controlamos que elemento del menu se selecciona
         if (item.itemId == R.id.action_send) {
-
-            Toast.makeText(this, "Click en send", Toast.LENGTH_SHORT).show()
+            val name: String = findViewById<TextInputEditText>(R.id.editTextName).text.toString()
+            Toast.makeText(this, name, Toast.LENGTH_SHORT).show()
         }
-
-
 
         return super.onOptionsItemSelected(item)
     }
