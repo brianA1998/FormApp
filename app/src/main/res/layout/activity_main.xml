@@ -114,48 +114,42 @@
             <androidx.appcompat.widget.AppCompatAutoCompleteTextView
                 android:id="@+id/actvCountries"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-            </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+                android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatAutoCompleteTextView>
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilLastName"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
             android:hint="Lugar de nacimiento"
-
-            app:startIconDrawable="@drawable/ic_person">
+            app:startIconDrawable="@drawable/ic_place">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextLastName"
+                android:id="@+id/etPlaceBirth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName|textCapWords"
-                android:maxLength="@integer/name_max_length" />
+                android:inputType="textAutoComplete"
+                android:maxLength="@integer/place_birth_max_length" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilLastName"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
-            android:hint="Apellido"
-            app:helperText="Obligatorio"
-            app:startIconDrawable="@drawable/ic_person">
+            android:hint="Notas"
+            app:startIconDrawable="@drawable/ic_notes">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextLastName"
+                android:id="@+id/etNotes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName|textCapWords"
-                android:maxLength="@integer/name_max_length" />
+                android:inputType="textMultiLine"
+                android:maxLength="@integer/notes_max_length" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
