@@ -4,6 +4,8 @@
     <item
         android:id="@+id/action_send"
         android:title="Enviar"
-        app:showAsAction="never"/>
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_send"
+        />
 
 </menu>
