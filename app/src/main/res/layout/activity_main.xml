@@ -61,8 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
 
@@ -81,8 +81,10 @@
                     android:id="@+id/editTextHeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
                     android:inputType="number"
-                    android:maxLength="@integer/height_max_length" />
+                    android:maxLength="@integer/height_max_length"
+                    android:nextFocusForward="@id/etPlaceBirth" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -143,6 +145,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
             android:hint="@string/hint_notes"
+            app:counterEnabled="true"
+            app:counterMaxLength="@integer/notes_max_length"
             app:startIconDrawable="@drawable/ic_notes">
 
             <com.google.android.material.textfield.TextInputEditText
