@@ -1,8 +1,10 @@
 package com.example.formapp
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.formapp.databinding.ActivityMainBinding
@@ -38,6 +40,12 @@ class MainActivity : AppCompatActivity() {
             val builder: AlertDialog.Builder = AlertDialog.Builder(this)
             builder.setTitle(getString(R.string.dialog_title))
             builder.setMessage("$name  $surname")
+            builder.setPositiveButton(getString(R.string.dialog_ok),DialogInterface.OnClickListener { dialog, which ->
+                Toast.makeText(this, "Positive button", Toast.LENGTH_SHORT).show()
+            })
+            builder.setNegativeButton(getString(R.string.dialog_cancel), DialogInterface.OnClickListener { dialog, which ->
+                Toast.makeText(this,"Negative button",Toast.LENGTH_SHORT).show()
+            })
 
             val dialog: AlertDialog = builder.create()
             dialog.show()
