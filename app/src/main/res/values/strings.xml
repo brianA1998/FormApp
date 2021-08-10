@@ -9,4 +9,5 @@
     <string name="hint_country">Pais</string>
     <string name="hint_place_birth">Lugar de nacimiento</string>
     <string name="hint_notes">Notas</string>
+    <string name="dialog_title">Datos recolectados</string>
 </resources>
