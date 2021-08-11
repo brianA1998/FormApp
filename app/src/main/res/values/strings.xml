@@ -12,4 +12,5 @@
     <string name="dialog_title">Datos recolectados</string>
     <string name="dialog_ok">Limpiar</string>
     <string name="dialog_cancel">Cancelar</string>
+    <string name="help_min_height_valid">Debe ser igual o mayor a 50cm</string>
 </resources>

@@ -71,6 +71,22 @@ class MainActivity : AppCompatActivity() {
     private fun validField(): Boolean {
         var isValid = true
 
+        if (binding.editTextHeight.text.toString().length == 0) {
+            binding.tilHeight.run {
+                error = getString(R.string.help_require)
+                requestFocus()
+            }
+            isValid = false
+        } else if (binding.editTextHeight.text.toString().toInt() < 50) {
+            binding.tilHeight.run {
+                error = getString(R.string.help_min_height_valid)
+                requestFocus()
+            }
+            isValid = false
+        } else {
+            binding.tilHeight.error = null
+        }
+
         if (binding.editTextLastName.text.toString().length == 0) {
             binding.tilLastName.run {
                 error = getString(R.string.help_require)
