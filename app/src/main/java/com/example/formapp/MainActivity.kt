@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 val name: String =
                     findViewById<TextInputEditText>(R.id.editTextName).text.toString()
                 val surname = binding.editTextLastName.text.toString()
-                val height = binding.editTextName.text.toString().trim()
+                val height = binding.editTextHeight.text.toString().trim()
                 val dateBirth = binding.editTextDateBirth.text.toString().trim()
                 val country = binding.actvCountries.text.toString().trim()
                 val placeBirth = binding.etPlaceBirth.text.toString().trim()
@@ -48,7 +48,17 @@ class MainActivity : AppCompatActivity() {
                 //Instanciamos alertdialog
                 val builder: AlertDialog.Builder = AlertDialog.Builder(this)
                 builder.setTitle(getString(R.string.dialog_title))
-                builder.setMessage("$name  $surname")
+                builder.setMessage(
+                    joinDate(
+                        name,
+                        surname,
+                        height,
+                        dateBirth,
+                        country,
+                        placeBirth,
+                        notes
+                    )
+                )
                 builder.setPositiveButton(
                     getString(R.string.dialog_ok),
                     DialogInterface.OnClickListener { dialog, which ->
@@ -68,10 +78,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * 
+     * Permite formatear los datos recolectados del formulario
      */
-    private fun joinDate(vararg fields: String) : String{
+    private fun joinDate(vararg fields: String): String {
+        var result: String = ""
 
+        fields.forEach { field ->
+            result = result + "$field\n "
+        }
+
+        return result
     }
 
 
