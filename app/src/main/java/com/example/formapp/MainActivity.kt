@@ -74,7 +74,13 @@ class MainActivity : AppCompatActivity() {
 
 
         if (binding.editTextName.text.toString().length == 0) {
+            binding.tilName.run {
+                error = getString(R.string.help_require)
+                requestFocus()
+            }
             isValid = false
+        } else {
+            binding.tilName.error = null
         }
 
 
