@@ -31,13 +31,17 @@ class MainActivity : AppCompatActivity() {
 
         //Controlamos que elemento del menu se selecciona
         if (item?.itemId == R.id.action_send) {
-
-
             if (validField()) {
-
                 val name: String =
                     findViewById<TextInputEditText>(R.id.editTextName).text.toString()
                 val surname = binding.editTextLastName.text.toString()
+                val height = binding.editTextName.text.toString().trim()
+                val dateBirth = binding.editTextDateBirth.text.toString().trim()
+                val country = binding.actvCountries.text.toString().trim()
+                val placeBirth = binding.etPlaceBirth.text.toString().trim()
+                val notes = binding.etNotes.text.toString().trim()
+
+
                 //Toast.makeText(this, "$name $surname", Toast.LENGTH_SHORT).show()
 
 
@@ -61,6 +65,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         return super.onOptionsItemSelected(item ?: return false)
+    }
+
+    /**
+     * 
+     */
+    private fun joinDate(vararg fields: String) : String{
+
     }
 
 
