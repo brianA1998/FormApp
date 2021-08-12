@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
 
                 android:layout_marginEnd="@dimen/common_padding_min"
-                android:layout_weight="40"
+                android:layout_weight="80"
                 android:hint="@string/hint_heigth"
                 app:helperText="@string/help_min_height"
                 app:startIconDrawable="@drawable/ic__height">
