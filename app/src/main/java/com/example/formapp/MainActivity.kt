@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,33 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val countries = arrayOf(
+            "Argentina",
+            "Bolivia",
+            "Colombia",
+            "Chicle",
+            "Ecuador",
+            "España",
+            "Estados Unidos",
+            "Mexico",
+            "Panama",
+            "Peru",
+            "Uruguay"
+        )
+
+        //adaptador para mostrar el arreglo
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, countries)
+
+        //Configurando el autocomplete de paises con el adapter
+        binding.actvCountries.setAdapter(adapter)
+
+        binding.actvCountries.setOnItemClickListener { parent, view, position, id ->
+            binding.etPlaceBirth.requestFocus()
+            Toast.makeText(this, countries.get(position), Toast.LENGTH_SHORT).show()
+        }
+
+
+        //Configuracion de la fecha del calendario
         binding.editTextDateBirth.setOnClickListener {
             val builder = MaterialDatePicker.Builder.datePicker()
             val picker = builder.build()
