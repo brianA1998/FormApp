@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.formapp.databinding.ActivityMainBinding
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.textfield.TextInputEditText
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +27,15 @@ class MainActivity : AppCompatActivity() {
         binding.editTextDateBirth.setOnClickListener {
             val builder = MaterialDatePicker.Builder.datePicker()
             val picker = builder.build()
+
+            picker.addOnPositiveButtonClickListener { timeInMilliSeconds ->
+                val dateStr =
+                    SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).apply {
+                        timeZone = TimeZone.getTimeZone("UTC")
+                    }.format(timeInMilliSeconds)
+                binding.editTextDateBirth.setText(dateStr)
+            }
+
             picker.show(supportFragmentManager, picker.toString())
         }
 
