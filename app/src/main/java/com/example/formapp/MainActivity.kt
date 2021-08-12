@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 val builder: AlertDialog.Builder = AlertDialog.Builder(this)
                 builder.setTitle(getString(R.string.dialog_title))
                 builder.setMessage(
-                    joinDate(
+                    joinData(
                         name,
                         surname,
                         height,
@@ -62,7 +62,16 @@ class MainActivity : AppCompatActivity() {
                 builder.setPositiveButton(
                     getString(R.string.dialog_ok),
                     DialogInterface.OnClickListener { dialog, which ->
-                        Toast.makeText(this, "Positive button", Toast.LENGTH_SHORT).show()
+                        with(binding) {
+                            editTextName.text?.clear()
+                            editTextLastName.text?.clear()
+                            editTextHeight.text?.clear()
+                            editTextDateBirth.text?.clear()
+                            actvCountries.text?.clear()
+                            etPlaceBirth.text?.clear()
+                            etNotes.text?.clear()
+                        }
+
                     })
                 builder.setNegativeButton(
                     getString(R.string.dialog_cancel), null
@@ -80,11 +89,14 @@ class MainActivity : AppCompatActivity() {
     /**
      * Permite formatear los datos recolectados del formulario
      */
-    private fun joinDate(vararg fields: String): String {
+    private fun joinData(vararg fields: String): String {
         var result: String = ""
 
         fields.forEach { field ->
-            result = result + "$field\n "
+            if (field.isNotBlank()) {
+                result += "$field\n"
+            }
+
         }
 
         return result
